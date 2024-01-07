@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     int n;
+    cin>>n;
     int arr1[n];
     int arr2[n];
 
