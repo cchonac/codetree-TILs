@@ -18,10 +18,11 @@ int main() {
     sort(arr2,arr2+n);
     int cnt=0;
     for(int i=0;i<n;i++){
-        if(arr1[n]==arr2[n]){
+        if(arr1[i]==arr2[i]){
             cnt++;
         }
     }
+
     if(cnt==n){
         cout<<"Yes";
     }else{
