@@ -14,10 +14,10 @@ class People{
 };
 bool cmp(People a, People b){
     if(a.height==b.height){
-        return a.weight>b.weight;
         if(a.weight==b.weight){
             return a.number<b.number;
         }
+        return a.weight>b.weight;
     }
     return a.height>b.height;
 }
