@@ -23,11 +23,13 @@ int main() {
     string wh;
 
     int idx=0;
+    string state="";
     for(int i=0;i<n;i++){
         cin>>when>>day>>wh;
         A[i]=Whether(when,day,wh);
         if(wh=="Rain"){
-            if(idx==0){
+            if(state==""){
+                state="rain";
                 idx=i;
             }
         }
