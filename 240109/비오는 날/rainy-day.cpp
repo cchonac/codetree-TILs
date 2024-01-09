@@ -29,7 +29,10 @@ int main() {
         A[i]=Whether(when,day,wh);
         if(wh=="Rain"){
             if(state==""){
+                idx=i;
                 state="rain";
+            }
+            else if(A[idx].when>A[idx].when){
                 idx=i;
             }
         }
