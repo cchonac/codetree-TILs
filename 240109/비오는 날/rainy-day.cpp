@@ -32,7 +32,7 @@ int main() {
                 idx=i;
                 state="rain";
             }
-            else if(A[idx].when>A[idx].when){
+            else if(A[idx].when>A[i].when){
                 idx=i;
             }
         }
