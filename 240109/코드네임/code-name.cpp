@@ -2,23 +2,23 @@
 using namespace std;
 
 int main() {
-    class code{
-        public: string codename;
+    class Code{
+        public: char codename;
                 int score;
-        code(string codename="",int score=0){
+        Code(char codename =0 ,int score=0){
             this->codename=codename;
             this->score=score;
         }
 
     };
-    code coder[5];
-    string codename;
+    Code coder[5];
+    char codename;
     int score;
-    int min=0;
+    int min=101;
     int idx;
     for(int i=0;i<5;i++){
         cin>>codename>>score;
-        coder[i]=code(codename,score);
+        coder[i]=Code(codename,score);
         if(score<min){
             min=score;
             idx=i;
