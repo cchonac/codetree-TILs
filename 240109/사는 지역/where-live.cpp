@@ -22,14 +22,14 @@ int main() {
         person[i]=People(name,number,home);
     }
     int last_idx =0;
-    for(int i=1;i<n;i++){
-        if(person[i].name<person[last_idx].name){
+    for(int i=0;i<n;i++){
+        if(person[i].name>person[last_idx].name){
             last_idx=i;
         }
     }
-    cout<<"name "<<person[n-1].name<<endl;
-    cout<<"addr "<<person[n-1].number<<endl;
-    cout<<"city "<<person[n-1].home<<endl;
+    cout<<"name "<<person[last_idx].name<<endl;
+    cout<<"addr "<<person[last_idx].number<<endl;
+    cout<<"city "<<person[last_idx].home<<endl;
 
     return 0;
 }
