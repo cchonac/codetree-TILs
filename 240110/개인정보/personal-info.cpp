@@ -39,13 +39,13 @@ int main() {
     cout<<"name"<<endl;
     sort(person,person+5,cmp1);
     for(int i=0;i<5;i++){
-        cout<<person[i].name<<" "<<person[i].height<<" "<<person[i].weight<<endl;
+        cout<<person[i].name<<" "<<person[i].height<<" "<<fixed<<setprecision(1)<<person[i].weight<<endl;
     }
     cout<<endl;
     cout<<"height"<<endl;
     sort(person,person+5,cmp2);
     for(int i=0;i<5;i++){
-        cout<<person[i].name<<" "<<person[i].height<<" "<<person[i].weight<<endl;
+        cout<<person[i].name<<" "<<person[i].height<<" "<<fixed<<setprecision(1)<<person[i].weight<<endl;
     }
     
 
