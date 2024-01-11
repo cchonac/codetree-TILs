@@ -2,7 +2,7 @@
 using namespace std;
 
 const int MAX_POSITION = 2000;
-int point=1000;
+int point=1001;
 int arr[MAX_POSITION+3]={0,};
 
 void move(int num, char a){
@@ -28,7 +28,7 @@ int main() {
         move(x,y);
     }
     int cnt=0;
-    for(int i=0;i<MAX_POSITION;i++){
+    for(int i=0;i<MAX_POSITION+3;i++){
         if(arr[i]>=2){
             cnt++;
         }
