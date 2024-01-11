@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_POSITION = 2001;
+const int MAX_POSITION = 2000;
 int point=1000;
-int arr[MAX_POSITION]={0,};
+int arr[MAX_POSITION+3]={0,};
 
 void move(int num, char a){
     if(a=='R'){
