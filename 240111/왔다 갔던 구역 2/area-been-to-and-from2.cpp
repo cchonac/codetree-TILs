@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_POSITION = 2001;
 int point=1000;
-int arr[2001]={0,};
+int arr[MAX_POSITION]={0,};
 
 void move(int num, char a){
     if(a=='R'){
@@ -27,7 +28,7 @@ int main() {
         move(x,y);
     }
     int cnt=0;
-    for(int i=0;i<2001;i++){
+    for(int i=0;i<MAX_POSITION;i++){
         if(arr[i]>=2){
             cnt++;
         }
