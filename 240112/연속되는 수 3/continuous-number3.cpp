@@ -6,7 +6,7 @@ int main() {
     cin>>n;
     int beforeNum, currentNum;
     int cnt=1;
-    int maxcnt=0;
+    int maxcnt=1;
     cin>>beforeNum;
     for(int i=1;i<n;i++){
             cin>>currentNum;
