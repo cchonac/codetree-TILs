@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int n;
     cin>>n;
-    int cnt=0;
+    int cnt=1;
 
     int currentCount, currentNum, beforeNum;
     cin>>beforeNum;
@@ -12,7 +12,7 @@ int main() {
 
 
 
-    for(int i=0;i<n-1;i++){
+    for(int i=1;i<n;i++){
         cin>>currentNum;
         if(beforeNum==currentNum){
             currentCount++;
