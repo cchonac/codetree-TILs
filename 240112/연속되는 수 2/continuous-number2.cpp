@@ -12,7 +12,7 @@ int main() {
 
 
 
-    for(int i=1;i<n;i++){
+    for(int i=0;i<n;i++){
         cin>>currentNum;
         if(beforeNum==currentNum){
             currentCount++;
