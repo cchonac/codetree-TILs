@@ -9,7 +9,7 @@ int main() {
     x2+=100;
     y1+=100;
     y2+=100;
-    int arr[100][100]={0,};
+    int arr[101][101]={0,};
     for(int i=0;i<n;i++){
         cin>>x1>>y1>>x2>>y2;
         for(int j=x1;j<x2;j++){
@@ -21,8 +21,8 @@ int main() {
         }
     }
     int cnt=0;
-    for(int i=0;i<100;i++){
-        for(int j=0;j<100;j++){
+    for(int i=0;i<101;i++){
+        for(int j=0;j<101;j++){
             if(arr[i][j]>0){
                 cnt++;
             }
