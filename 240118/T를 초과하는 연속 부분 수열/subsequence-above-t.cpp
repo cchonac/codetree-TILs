@@ -7,7 +7,7 @@ int main() {
 
     int arr[n];
 
-    int cnt,ans=0;
+    int cnt=0,ans=0;
 
     for(int i=0;i<n;i++){
         cin>>arr[i];
@@ -20,11 +20,5 @@ int main() {
         }
         ans=max(ans,cnt);
     }
-    if(ans==1){
-        cout<<0;
-    }else{
-        cout<<ans;
-    }
-    
     return 0;
 }
