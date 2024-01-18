@@ -42,7 +42,7 @@ int main() {
         
     }
     int ans=-1;
-    for(int i=1;i<1000001;i++){
+    for(int i=1;i<j;i++){
         if(arr1[i]==arr2[i]){
             ans=i;
             break;
