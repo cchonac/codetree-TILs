@@ -11,6 +11,10 @@ int main() {
     int cnt=1;
     int sol=0;
     for(int i=0;i<N;i++){
+        if(N==2){
+            sol=1;
+            break;
+        }
         if(arr[i]<arr[i+1]){
             cnt++;
         }else{
