@@ -3,8 +3,8 @@ using namespace std;
 
 int n,m;
 bool visited[101][101]={false};
-int graph[101][101];
-int ans;
+int graph[101][101]={0,};
+
 
 // new_x new_y
 // 좌표가 격자 안에 있어야한다.
@@ -54,7 +54,7 @@ int main() {
     visited[1][1]=true;
     DFS(1,1);
 
-    cout<<visited[n][m];
+    cout<<visited[n+1][m+1];
 
     return 0;
 }
