@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int n,m;
@@ -55,11 +54,7 @@ int main() {
     visited[1][1]=true;
     DFS(1,1);
 
-    if (visited[n][m]) {
-        cout << "1" << endl;
-    } else {
-        cout << "0" << endl;
-    }
+    cout<<visited[n][m];
 
     return 0;
 }
