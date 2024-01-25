@@ -11,7 +11,7 @@ queue<pair<int,int>> que;
 
 int N,K;
 
-int cnt=1;
+
 
 void Push(int x,int y){
     visited[x][y]=true;
@@ -31,21 +31,23 @@ bool CanGo(int x, int y){
     return true;
 }
 
-void BFS(int x, int y){
-    int dx[4]={1,-1,0,0};
-    int dy[4]={0,0,1,-1};
+void BFS(){
+    
     while(!que.empty()){
         pair<int,int>now=que.front();
         int x=now.first;
         int y=now.second;
         que.pop();
+        int dx[4]={1,-1,0,0};
+        int dy[4]={0,0,1,-1};
+
         for(int i=0;i<4;i++){
             int new_x=x+dx[i];
             int new_y=y+dy[i];
-            if(CanGo(new_x,new_y)&&visited[new_x][new_y]==0){
-                cnt++;
-                Push(new_x,new_y);
+            if(CanGo(new_x,new_y)){
                 
+                Push(new_x,new_y);
+
             }
         }
     }
@@ -61,14 +63,24 @@ int main() {
         }
     }
     int x,y;
-    int ans=0;
-    for(int i=0;i<K;i++){
+ 
+    while(K--){
         cin>>x>>y;
-        Push(x,y);
-        BFS(x,y);
-        ans+=cnt;
-        cnt=0;
+        que.push(make_pair(x-1,y-1));
+        visited[x-1][y-1]=true;
     }
-    cout<<ans<<"\n";
+
+    BFS();
+
+    int ans =0;
+
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
+            if(visited[i][j]){
+                ans++;
+            }
+        }
+    }
+    cout<<ans;
     return 0;
 }
