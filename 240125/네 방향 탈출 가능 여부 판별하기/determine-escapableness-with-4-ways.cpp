@@ -27,21 +27,20 @@ bool CanGo(int x,int y){
     return true;
 }
 void Push(int x, int y){
-
     visited[x][y]=true;
     que.push(make_pair(x,y));
 }
 
 void BFS(){
-    int dx[2]={1,0};
-    int dy[2]={0,1};
+    int dx[4]={1,0,-1,0};
+    int dy[4]={0,1,0,-1};
     while(!que.empty()){
         pair<int,int>cur_pos=que.front();
         que.pop();
 
         int x=cur_pos.first;
         int y=cur_pos.second;
-        for(int i=0;i<2;i++){
+        for(int i=0;i<4;i++){
             int new_x=x+dx[i];
             int new_y=y+dy[i];
             if(CanGo(new_x,new_y)){
@@ -62,7 +61,8 @@ int main() {
     }
     Push(0,0);
     BFS();
-    cout<<graph[N-1][M-1];
+    
+    cout<<visited[N-1][M-1];
 
     
     return 0;
