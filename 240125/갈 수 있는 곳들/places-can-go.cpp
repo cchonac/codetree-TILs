@@ -42,7 +42,7 @@ void BFS(int x, int y){
         for(int i=0;i<4;i++){
             int new_x=x+dx[i];
             int new_y=y+dy[i];
-            if(CanGo(new_x,new_y)){
+            if(CanGo(new_x,new_y)&&visited[new_x][new_y]==0){
                 cnt++;
                 Push(new_x,new_y);
                 
@@ -67,7 +67,7 @@ int main() {
         Push(x,y);
         BFS(x,y);
         ans+=cnt;
-
+        cnt=0;
     }
     cout<<ans<<"\n";
     return 0;
