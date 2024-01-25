@@ -27,6 +27,7 @@ bool CanGo(int x, int y){
     if(visited[x][y]==true||graph[x][y]==1){
         return false;
     }
+    cnt++;
     return true;
 }
 
@@ -42,7 +43,7 @@ void BFS(int x, int y){
             int new_x=x+dx[i];
             int new_y=y+dy[i];
             if(CanGo(new_x,new_y)){
-                cnt++;
+                
                 Push(new_x,new_y);
                 
             }
@@ -69,6 +70,6 @@ int main() {
         cnt=0;
 
     }
-    cout<<ans+1<<"\n";
+    cout<<ans<<"\n";
     return 0;
 }
