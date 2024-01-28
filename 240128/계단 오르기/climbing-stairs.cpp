@@ -6,7 +6,7 @@ using namespace std;
 int dp[1001]={0,};
 
 int CountWays(int n){
-    dp[2]=1;
+    dp[0]=1;
     for(int i=1;i<=n;i++){
         if(i>=2){
             dp[i]=(dp[i]+dp[i-2])%10007;
