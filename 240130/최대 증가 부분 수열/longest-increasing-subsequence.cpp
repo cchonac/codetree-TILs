@@ -17,7 +17,11 @@ int main() {
             dp[i]=max(dp[i],dp[j]+1);
         }
     }
-    cout<<dp[N];
+    int ans=0;
+    for(int i=1;i<=N;i++){
+        ans=max(ans,dp[i]);
+    }
+    cout<<ans;
 
     return 0;
 }
