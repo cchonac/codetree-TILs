@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     int N,M;
     cin>>N>>M;
-    int coins[N+1];
+    int coins[N+1]={0,};
     int dp[101]={0,};
     for(int i=1;i<=N;i++){
         cin>>coins[i]; //1,4,5
