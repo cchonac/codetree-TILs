@@ -31,7 +31,7 @@ void quick_sort(int arr[], int low, int high){
         int pi=partition(arr,low,high);
 
         quick_sort(arr,low,pi-1);
-        quick_sort(arr,pi,high);
+        quick_sort(arr,pi+1,high);
     }
 }
 
